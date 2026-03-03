@@ -1,4 +1,4 @@
-# HerbApproach — yellowleaf.club
+# Yellow Leaf Cafe — yellowleaf.club
 
 Cannabis dispensary website with Decap CMS admin panel.
 

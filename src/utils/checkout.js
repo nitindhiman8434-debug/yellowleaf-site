@@ -7,7 +7,7 @@ export function generateWhatsAppCheckout(cartItems) {
   const total = cartItems.reduce((s, i) => s + i.sale * i.qty, 0).toFixed(2);
   const pts = Math.floor(parseFloat(total));
 
-  const msg = `🛒 *Order Request from HerbApproach*
+  const msg = `🛒 *Order Request from Yellow Leaf Cafe*
 
 *Items:*
 ${lines}

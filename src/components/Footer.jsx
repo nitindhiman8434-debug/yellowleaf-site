@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3>Herb<em>Approach</em></h3>
+            <h3>Yellow Leaf <em>Cafe</em></h3>
             <p>Canada's trusted online dispensary specializing in Mail Order Marijuana. Lab-tested, discreetly delivered, and backed by our satisfaction guarantee. Serving all provinces and territories since 2017.</p>
           </div>
           <div className="footer-col">
@@ -30,7 +30,7 @@ export default function Footer() {
             <Link to="/signin">Sign In</Link>
             <Link to="/register">Register</Link>
             <Link to="/about">About Us</Link>
-            <a href="mailto:support@herbapproach.com">Contact Us</a>
+            <a href="mailto:support@yellowleaf.club">Contact Us</a>
           </div>
         </div>
 
@@ -40,7 +40,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© 2026 Herb Approach. All rights reserved. Canadian Online Dispensary.</span>
+          <span>© 2026 Yellow Leaf Cafe. All rights reserved. Canadian Online Dispensary.</span>
           <span>Licensed & Regulated · Privacy Policy · Terms of Service</span>
         </div>
       </div>

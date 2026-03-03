@@ -24,7 +24,7 @@ export default function SignInPage() {
     <div className="page-container">
       <div className="form-card">
         <h2>Sign In</h2>
-        <p className="form-subtitle">Welcome back to Herb Approach</p>
+        <p className="form-subtitle">Welcome back to Yellow Leaf Cafe</p>
 
         <div className="form-group"><label>Email Address</label><input type="email" placeholder="you@email.com" /></div>
         <div className="form-group"><label>Password</label><input type="password" placeholder="Your password" /></div>

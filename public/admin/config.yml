@@ -42,33 +42,34 @@ collections:
   # ═══════════════════════════════════
   - name: "products"
     label: "🛒 Products"
-    file: "content/products.json"
-    description: "Add, edit, or remove products"
-    widget: "list"
-    fields:
-      - name: "items"
-        label: "Products"
-        widget: "list"
-        summary: "{{fields.name}} — ${{fields.sale}} ({{fields.category}}/{{fields.subcategory}})"
+    files:
+      - name: "all-products"
+        label: "All Products"
+        file: "content/products.json"
         fields:
-          - { name: "id", label: "ID", widget: "string", hint: "Unique ID like f1, e2, a3" }
-          - { name: "name", label: "Product Name", widget: "string" }
-          - { name: "slug", label: "URL Slug", widget: "string", hint: "lowercase-with-dashes" }
-          - { name: "category", label: "Category", widget: "select", options: ["flowers", "edibles", "accessories"] }
-          - { name: "subcategory", label: "Subcategory", widget: "string", hint: "e.g. indica, sativa, hybrid, gummies, grinder" }
-          - { name: "image", label: "Product Image", widget: "image", required: false }
-          - { name: "price", label: "Original Price ($)", widget: "number", value_type: "float" }
-          - { name: "sale", label: "Sale Price ($)", widget: "number", value_type: "float" }
-          - { name: "weight", label: "Weight/Size", widget: "string", required: false }
-          - { name: "thc", label: "THC (%/mg)", widget: "number", value_type: "float", required: false }
-          - { name: "cbd", label: "CBD (%)", widget: "number", value_type: "float", required: false }
-          - { name: "rating", label: "Rating (0-5)", widget: "number", value_type: "float", min: 0, max: 5 }
-          - { name: "reviews", label: "Review Count", widget: "number", value_type: "int" }
-          - { name: "badge", label: "Badge", widget: "string", required: false, hint: "Flash Deal, Best Seller, Premium, 58% OFF, etc." }
-          - { name: "desc", label: "Description", widget: "text" }
-          - { name: "lineage", label: "Lineage/Genetics", widget: "string", required: false }
-          - { name: "aroma", label: "Aroma", widget: "string", required: false }
-          - { name: "flavor", label: "Flavor", widget: "string", required: false }
+          - name: "body"
+            label: "Products"
+            widget: "list"
+            summary: "{{fields.name}} — ${{fields.sale}} ({{fields.category}}/{{fields.subcategory}})"
+            fields:
+              - { name: "id", label: "ID", widget: "string", hint: "Unique ID like f1, e2, a3" }
+              - { name: "name", label: "Product Name", widget: "string" }
+              - { name: "slug", label: "URL Slug", widget: "string", hint: "lowercase-with-dashes" }
+              - { name: "category", label: "Category", widget: "select", options: ["flowers", "edibles", "accessories"] }
+              - { name: "subcategory", label: "Subcategory", widget: "string", hint: "e.g. indica, sativa, hybrid, gummies, grinder" }
+              - { name: "image", label: "Product Image", widget: "image", required: false }
+              - { name: "price", label: "Original Price ($)", widget: "number", value_type: "float" }
+              - { name: "sale", label: "Sale Price ($)", widget: "number", value_type: "float" }
+              - { name: "weight", label: "Weight/Size", widget: "string", required: false }
+              - { name: "thc", label: "THC (%/mg)", widget: "number", value_type: "float", required: false }
+              - { name: "cbd", label: "CBD (%)", widget: "number", value_type: "float", required: false }
+              - { name: "rating", label: "Rating (0-5)", widget: "number", value_type: "float", min: 0, max: 5 }
+              - { name: "reviews", label: "Review Count", widget: "number", value_type: "int" }
+              - { name: "badge", label: "Badge", widget: "string", required: false, hint: "Flash Deal, Best Seller, Premium, 58% OFF, etc." }
+              - { name: "desc", label: "Description", widget: "text" }
+              - { name: "lineage", label: "Lineage/Genetics", widget: "string", required: false }
+              - { name: "aroma", label: "Aroma", widget: "string", required: false }
+              - { name: "flavor", label: "Flavor", widget: "string", required: false }
 
   # ═══════════════════════════════════
   # PAGES

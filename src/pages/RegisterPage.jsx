@@ -32,7 +32,7 @@ export default function RegisterPage() {
     <div className="page-container">
       <div className="form-card">
         <h2>Create Account</h2>
-        <p className="form-subtitle">Join Herb Approach and get 500 bonus points ($25)</p>
+        <p className="form-subtitle">Join Yellow Leaf Cafe and get 500 bonus points ($25)</p>
 
         <div className="form-group"><label>First Name</label><input type="text" placeholder="John" /></div>
         <div className="form-group"><label>Last Name</label><input type="text" placeholder="Doe" /></div>

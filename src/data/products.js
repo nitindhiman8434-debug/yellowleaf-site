@@ -1,6 +1,9 @@
 // Import CMS content files — these are edited via /admin
 import settingsData from '../../content/settings.json';
-import productsData from '../../content/products.json';
+import productsWrapper from '../../content/products.json';
+
+// Handle both wrapped {body: [...]} and raw array formats
+const productsData = Array.isArray(productsWrapper) ? productsWrapper : (productsWrapper.body || []);
 import faqData from '../../content/pages/faq.json';
 import aboutData from '../../content/pages/about.json';
 import shippingData from '../../content/pages/shipping.json';

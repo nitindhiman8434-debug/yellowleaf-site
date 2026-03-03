@@ -19,7 +19,7 @@ export default function Header({ cartCount, onCartOpen, onSearch }) {
       <header className="header">
         <div className="header-inner">
           <Link to="/" className="logo" onClick={() => { setSearchVal(''); onSearch(''); }}>
-            Herb<em>Approach</em>
+            Yellow Leaf <em>Cafe</em>
           </Link>
 
           <div className="search-wrap">
