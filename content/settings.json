@@ -1,0 +1,23 @@
+{
+  "site_name": "Herb Approach",
+  "whatsapp_number": "18052004045",
+  "support_email": "support@herbapproach.com",
+  "verify_email": "verify@herbapproach.com",
+  "min_order": 100,
+  "free_ship_min": 150,
+  "points_per_dollar": 1,
+  "points_to_dollar": 20,
+  "announce_bar": "🔥 Free 300mg CBD Gummies On All Orders Over $199 — Use code HERB25 for 25% off — $100 Minimum Order",
+  "hero_title": "Buy Weed Online\nCanada's #1 Dispensary",
+  "hero_subtitle": "Premium cannabis strains, edibles & concentrates from BC's top producers. Lab-tested. Discreetly shipped. Earn loyalty points on every order. Free shipping over $150.",
+  "hero_cta_text": "Shop Now →",
+  "hero_cta_link": "/shop/flowers",
+  "service_pillars": [
+    { "icon": "🎯", "title": "Service", "desc": "Customer satisfaction is our #1 priority. Live chat 9am-5pm PST, email 24/7." },
+    { "icon": "✨", "title": "Quality", "desc": "We hold suppliers to the highest standard. Lab-tested, BC-grown premium cannabis." },
+    { "icon": "🛡️", "title": "Trust", "desc": "1,600+ verified reviews on Trustpilot. Transparent and honest since day one." },
+    { "icon": "🔒", "title": "Security", "desc": "Vacuum-sealed, discreet packaging. Your privacy is always protected." },
+    { "icon": "🚀", "title": "Delivery", "desc": "Canada-wide shipping via Canada Post. Free shipping on orders over $150." },
+    { "icon": "📋", "title": "Compliance", "desc": "Fully licensed Canadian online dispensary. ID verification required." }
+  ]
+}

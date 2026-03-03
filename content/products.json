@@ -1,0 +1,165 @@
+[
+  {
+    "id": "f1", "name": "Pop Tartz", "slug": "pop-tartz",
+    "category": "flowers", "subcategory": "indica", "thc": 28, "cbd": 0.4,
+    "price": 125, "sale": 69.99, "weight": "28g",
+    "rating": 4.88, "reviews": 312, "image": "/images/products/default-flower.jpg",
+    "badge": "Flash Deal",
+    "desc": "A potent indica-dominant hybrid known for its sweet, fruity aroma reminiscent of the popular pastry. Dense, trichome-covered buds deliver heavy relaxation and euphoria.",
+    "lineage": "Tartz Genetics", "aroma": "Sweet, Fruity, Dough",
+    "flavor": "Sweet berry pastry with vanilla undertones",
+    "effects": { "relaxed": 95, "sleepy": 85, "happy": 70, "hungry": 60, "euphoric": 50 }
+  },
+  {
+    "id": "f2", "name": "Northern Lights", "slug": "northern-lights",
+    "category": "flowers", "subcategory": "indica", "thc": 24, "cbd": 0.6,
+    "price": 180, "sale": 139, "weight": "28g",
+    "rating": 4.8, "reviews": 287, "image": "/images/products/default-flower.jpg",
+    "badge": "",
+    "desc": "Classic indica with resinous buds and sweet-spicy aroma. A legendary strain revered for deep body relaxation and peaceful sleep.",
+    "lineage": "Afghani × Thai", "aroma": "Sweet, Spicy, Earthy",
+    "flavor": "Honey with herbal notes",
+    "effects": { "relaxed": 90, "sleepy": 80, "happy": 75, "hungry": 55, "euphoric": 65 }
+  },
+  {
+    "id": "f3", "name": "Granddaddy Purple", "slug": "granddaddy-purple",
+    "category": "flowers", "subcategory": "indica", "thc": 23, "cbd": 0.3,
+    "price": 200, "sale": 159, "weight": "28g",
+    "rating": 4.7, "reviews": 198, "image": "/images/products/default-flower.jpg",
+    "badge": "Popular",
+    "desc": "Iconic purple strain delivering potent full-body effects and a sweet grape-like aroma. Perfect for evening relaxation.",
+    "lineage": "Purple Urkle × Big Bud", "aroma": "Grape, Berry, Sweet",
+    "flavor": "Rich grape candy",
+    "effects": { "relaxed": 92, "sleepy": 88, "happy": 68, "hungry": 72, "euphoric": 55 }
+  },
+  {
+    "id": "f4", "name": "Green Crack", "slug": "green-crack",
+    "category": "flowers", "subcategory": "sativa", "thc": 22, "cbd": 0.2,
+    "price": 190, "sale": 145, "weight": "28g",
+    "rating": 4.8, "reviews": 256, "image": "/images/products/default-flower.jpg",
+    "badge": "Flash Deal",
+    "desc": "Tangy mango-flavored sativa for sharp energy and focus throughout the day. A go-to for creative productivity.",
+    "lineage": "Skunk #1 selection", "aroma": "Citrus, Mango, Sweet",
+    "flavor": "Tropical mango burst",
+    "effects": { "energetic": 95, "focused": 90, "happy": 85, "euphoric": 80, "creative": 75 }
+  },
+  {
+    "id": "f5", "name": "Sour Diesel", "slug": "sour-diesel",
+    "category": "flowers", "subcategory": "sativa", "thc": 26, "cbd": 0.3,
+    "price": 210, "sale": 169, "weight": "28g",
+    "rating": 4.9, "reviews": 342, "image": "/images/products/default-flower.jpg",
+    "badge": "",
+    "desc": "Pungent diesel aroma with dreamy cerebral and energizing effects. One of the most iconic sativa strains.",
+    "lineage": "Chemdawg 91 × Super Skunk", "aroma": "Diesel, Citrus, Herbal",
+    "flavor": "Sharp fuel with lemon zest",
+    "effects": { "energetic": 88, "focused": 85, "happy": 90, "euphoric": 92, "creative": 78 }
+  },
+  {
+    "id": "f6", "name": "Blue Dream", "slug": "blue-dream",
+    "category": "flowers", "subcategory": "hybrid", "thc": 21, "cbd": 0.5,
+    "price": 175, "sale": 129, "weight": "28g",
+    "rating": 4.7, "reviews": 423, "image": "/images/products/default-flower.jpg",
+    "badge": "Best Seller",
+    "desc": "Balanced hybrid with full-body relaxation and gentle cerebral invigoration. The most popular strain in North America.",
+    "lineage": "Blueberry × Haze", "aroma": "Blueberry, Sweet, Herbal",
+    "flavor": "Sweet blueberry pie",
+    "effects": { "relaxed": 80, "happy": 90, "euphoric": 85, "creative": 75, "energetic": 60 }
+  },
+  {
+    "id": "f7", "name": "Wedding Cake", "slug": "wedding-cake",
+    "category": "flowers", "subcategory": "hybrid", "thc": 25, "cbd": 0.4,
+    "price": 230, "sale": 179, "weight": "28g",
+    "rating": 4.9, "reviews": 189, "image": "/images/products/default-flower.jpg",
+    "badge": "",
+    "desc": "Rich and tangy with relaxing and euphoric effects. Top-shelf craft cannabis quality.",
+    "lineage": "Triangle Kush × Animal Mints", "aroma": "Vanilla, Earthy, Sweet",
+    "flavor": "Tangy vanilla frosting",
+    "effects": { "relaxed": 85, "happy": 88, "euphoric": 82, "hungry": 70, "sleepy": 55 }
+  },
+  {
+    "id": "f8", "name": "Chronic Rock Pre-Rolls", "slug": "chronic-rock-prerolls",
+    "category": "flowers", "subcategory": "preroll", "thc": 24, "cbd": 0.3,
+    "price": 45, "sale": 35, "weight": "5×1g",
+    "rating": 4.6, "reviews": 156, "image": "/images/products/default-flower.jpg",
+    "badge": "Flash Deal",
+    "desc": "Premium pre-rolled joints infused with kief and concentrates for maximum potency. Five king-size rolls per pack.",
+    "effects": { "relaxed": 85, "sleepy": 75, "happy": 70, "hungry": 60, "euphoric": 55 }
+  },
+  {
+    "id": "e1", "name": "THC Cookies – Choco Chip", "slug": "thc-cookies-choco-chip",
+    "category": "edibles", "subcategory": "cookies", "thc": 50,
+    "price": 25, "sale": 18, "weight": "100mg",
+    "rating": 4.7, "reviews": 89, "image": "/images/products/default-edible.jpg",
+    "badge": "Flash Deal",
+    "desc": "Rich double chocolate chip cookie infused with premium THC distillate. Lab-tested for consistent dosing every time.",
+    "effects": { "relaxed": 80, "happy": 85, "euphoric": 70, "sleepy": 60, "hungry": 75 }
+  },
+  {
+    "id": "e2", "name": "Fudge Brownie Square", "slug": "fudge-brownie-square",
+    "category": "edibles", "subcategory": "brownies", "thc": 75,
+    "price": 30, "sale": 22, "weight": "150mg",
+    "rating": 4.8, "reviews": 134, "image": "/images/products/default-edible.jpg",
+    "badge": "",
+    "desc": "Dense fudge brownie with consistent dosing throughout. Perfect for experienced users seeking long-lasting effects.",
+    "effects": { "relaxed": 88, "happy": 80, "euphoric": 75, "sleepy": 70, "hungry": 82 }
+  },
+  {
+    "id": "e3", "name": "500mg THC Gummies (Apex Edibles)", "slug": "500mg-thc-gummies-apex",
+    "category": "edibles", "subcategory": "gummies", "thc": 500,
+    "price": 25, "sale": 12.99, "weight": "500mg/pack",
+    "rating": 4.81, "reviews": 267, "image": "/images/products/default-edible.jpg",
+    "badge": "Best Seller",
+    "desc": "High-dose assorted gummies from Apex Edibles. 50mg per piece, 10 gummies per pack. Precisely dosed for reliable, potent effects.",
+    "effects": { "relaxed": 70, "happy": 90, "euphoric": 80, "creative": 65, "energetic": 50 }
+  },
+  {
+    "id": "e4", "name": "375mg THC Cubes (Bliss Edibles)", "slug": "375mg-thc-cubes-bliss",
+    "category": "edibles", "subcategory": "gummies", "thc": 375,
+    "price": 23.99, "sale": 9.99, "weight": "375mg/pack",
+    "rating": 4.84, "reviews": 143, "image": "/images/products/default-edible.jpg",
+    "badge": "58% OFF",
+    "desc": "Tropical assorted THC cubes from Bliss Edibles. Fan-favourite for excellent flavour and reliable potency.",
+    "effects": { "relaxed": 72, "happy": 85, "euphoric": 78, "creative": 60, "energetic": 45 }
+  },
+  {
+    "id": "e5", "name": "Custom 420 Edibles", "slug": "custom-420-edibles",
+    "category": "edibles", "subcategory": "gummies", "thc": 200,
+    "price": 13, "sale": 4.99, "weight": "200mg/pack",
+    "rating": 4.6, "reviews": 210, "image": "/images/products/default-edible.jpg",
+    "badge": "62% OFF",
+    "desc": "Assorted candy variety pack with precise THC dosing. Great value entry-level edibles for casual users.",
+    "effects": { "relaxed": 65, "happy": 80, "euphoric": 70, "creative": 55, "energetic": 40 }
+  },
+  {
+    "id": "a1", "name": "4-Piece Titanium Grinder", "slug": "4-piece-titanium-grinder",
+    "category": "accessories", "subcategory": "grinder",
+    "price": 45, "sale": 35, "weight": "",
+    "rating": 4.8, "reviews": 201, "image": "/images/products/default-accessory.jpg",
+    "badge": "",
+    "desc": "Aircraft-grade titanium with diamond-shaped teeth and kief catcher. Built to last a lifetime."
+  },
+  {
+    "id": "a2", "name": "Organic Hemp Papers", "slug": "organic-hemp-papers",
+    "category": "accessories", "subcategory": "rolling-paper",
+    "price": 8, "sale": 5, "weight": "",
+    "rating": 4.5, "reviews": 312, "image": "/images/products/default-accessory.jpg",
+    "badge": "",
+    "desc": "Unbleached organic hemp rolling papers, ultra-thin for clean, even burns."
+  },
+  {
+    "id": "a3", "name": "Bamboo Rolling Tray", "slug": "bamboo-rolling-tray",
+    "category": "accessories", "subcategory": "rolling-tray",
+    "price": 35, "sale": 28, "weight": "",
+    "rating": 4.7, "reviews": 98, "image": "/images/products/default-accessory.jpg",
+    "badge": "",
+    "desc": "Handcrafted bamboo tray with magnetic lid and compartments for organized rolling."
+  },
+  {
+    "id": "a4", "name": "Borosilicate Glass Bong", "slug": "borosilicate-glass-bong",
+    "category": "accessories", "subcategory": "bong",
+    "price": 120, "sale": 89, "weight": "",
+    "rating": 4.9, "reviews": 176, "image": "/images/products/default-accessory.jpg",
+    "badge": "Premium",
+    "desc": "Scientific-grade borosilicate glass with ice catcher and percolator for smooth hits."
+  }
+]

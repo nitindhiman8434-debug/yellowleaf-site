@@ -1,0 +1,15 @@
+{
+  "title": "Shipping Information",
+  "intro": "We ship discreetly to all Canadian provinces and territories via Canada Post Xpresspost.",
+  "free_shipping_min": 150,
+  "shipping_fee": 15,
+  "delivery_days": "2-5",
+  "provinces": ["Ontario", "Alberta", "Quebec", "British Columbia", "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick", "Newfoundland and Labrador", "Prince Edward Island", "Nunavut", "Yukon", "Northwest Territories"],
+  "policies": [
+    "All orders are vacuum-sealed and shipped in discreet packaging",
+    "Tracking number provided for every order via email",
+    "Orders placed before 9am PST ship same business day",
+    "Free shipping on all orders over $150",
+    "Standard shipping fee of $15 for orders under $150"
+  ]
+}
