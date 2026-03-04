@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from '../router';
 import ProductGrid from '../components/ProductGrid';
-import { FLASH_DEALS, BEST_SELLERS, SERVICE_PILLARS, ALL_PRODUCTS, HERO } from '../data/products';
+import { FLASH_DEALS, BEST_SELLERS, SERVICE_PILLARS, ALL_PRODUCTS, HERO, ADDRESS } from '../data/products';
 
 export default function HomePage({ onAdd, onProductClick, searchQuery }) {
   if (searchQuery) {
@@ -29,6 +29,7 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
 
   return (
     <>
+      {/* ── HERO BANNER ── */}
       <div className="hero" style={{ backgroundImage: 'url(/images/hero/banner.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
         <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(15,45,15,0.88) 0%, rgba(0,0,0,0.75) 100%)', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}></div>
         <div className="hero-inner" style={{ position: 'relative', zIndex: 1 }}>
@@ -47,6 +48,7 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
         </div>
       </div>
 
+      {/* ── FLASH DEALS (8 products) ── */}
       <div className="section">
         <div className="section-header">
           <div>
@@ -55,9 +57,10 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
           </div>
           <Link to="/shop/flowers" className="view-all-btn">View All</Link>
         </div>
-        <ProductGrid products={FLASH_DEALS} onAdd={onAdd} onProductClick={onProductClick} />
+        <ProductGrid products={FLASH_DEALS.slice(0, 8)} onAdd={onAdd} onProductClick={onProductClick} />
       </div>
 
+      {/* ── SERVICE PILLARS ── */}
       <div className="pillars-section">
         <div className="pillars-grid">
           {SERVICE_PILLARS.map(s => (
@@ -70,6 +73,7 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
         </div>
       </div>
 
+      {/* ── BEST SELLERS (12 products) ── */}
       <div className="section">
         <div className="section-header">
           <div>
@@ -77,7 +81,49 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
             <p className="section-subtitle">Top-rated products loved by 50,000+ customers</p>
           </div>
         </div>
-        <ProductGrid products={BEST_SELLERS} onAdd={onAdd} onProductClick={onProductClick} />
+        <ProductGrid products={BEST_SELLERS.slice(0, 12)} onAdd={onAdd} onProductClick={onProductClick} />
+      </div>
+
+      {/* ── WHY CHOOSE US / INFO SECTION ── */}
+      <div className="why-section">
+        <div className="why-inner">
+          <h2 className="why-title">Why Choose Yellow Leaf Cafe?</h2>
+          <p className="why-subtitle">Pattaya's most trusted cannabis dispensary</p>
+
+          <div className="why-grid">
+            <div className="why-card">
+              <div className="why-icon">🧪</div>
+              <h3>Lab-Tested & Certified</h3>
+              <p>Every product undergoes rigorous third-party lab testing for potency, purity, and safety. We never compromise on quality.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">🚚</div>
+              <h3>Fast Thailand-Wide Delivery</h3>
+              <p>Same-day delivery in Pattaya. 1-3 days to Bangkok. 3-5 days nationwide. Discreet, sealed packaging on every order.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">🌿</div>
+              <h3>30+ Premium Strains</h3>
+              <p>From legendary Indicas to energizing Sativas and balanced Hybrids — we stock only the finest hand-selected cannabis.</p>
+            </div>
+            <div className="why-card">
+              <div className="why-icon">💎</div>
+              <h3>Loyalty Rewards</h3>
+              <p>Earn points on every purchase. New members get 500 bonus points (฿875 value). Redeem for discounts on future orders.</p>
+            </div>
+          </div>
+
+          <div className="why-cta-row">
+            <Link to="/shop/flowers" className="hero-cta" style={{ background: 'var(--green)' }}>Shop All Strains →</Link>
+            <Link to="/about" className="hero-cta" style={{ background: 'transparent', border: '2px solid var(--green)', color: 'var(--green)' }}>Learn More About Us</Link>
+          </div>
+
+          {ADDRESS && (
+            <div className="why-address">
+              📍 Visit us: <strong>{ADDRESS}</strong>
+            </div>
+          )}
+        </div>
       </div>
     </>
   );

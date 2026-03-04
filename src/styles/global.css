@@ -516,6 +516,79 @@ body {
 .province-tag { padding: 6px 14px; background: var(--grey-50); border: 1px solid var(--grey-100); border-radius: 100px; font-size: 12px; color: var(--grey-700); }
 
 /* ── FOOTER ── */
+/* ── WHY CHOOSE US SECTION ── */
+.why-section {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 50%, #f0f9ff 100%);
+  padding: 64px 32px;
+}
+.why-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+.why-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--dark-deep);
+  margin-bottom: 8px;
+}
+.why-subtitle {
+  color: var(--grey-500);
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-bottom: 36px;
+}
+.why-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 28px 20px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.25s, box-shadow 0.25s;
+  text-align: center;
+}
+.why-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+.why-icon {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+.why-card h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--dark-deep);
+  margin-bottom: 8px;
+}
+.why-card p {
+  font-size: 13px;
+  color: var(--grey-500);
+  line-height: 1.6;
+}
+.why-cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.why-address {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--grey-500);
+}
+.why-address strong {
+  color: var(--dark-deep);
+}
+
+/* ── FOOTER ── */
 .footer { background: var(--dark-deep); color: var(--white); padding: 48px 32px 24px; }
 .footer-inner { max-width: 1280px; margin: 0 auto; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 28px; margin-bottom: 28px; }
@@ -591,6 +664,8 @@ body {
   .hero-text p { margin: 0 auto 28px; }
   .hero-visual { font-size: 70px; }
   .footer-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .why-title { font-size: 26px; }
   .pd-top { flex-direction: column; }
   .pd-image { width: 100%; height: 180px; }
   .header-inner { padding: 0 12px; gap: 8px; }
