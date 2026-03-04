@@ -4,296 +4,527 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yellow Leaf Cafe — Admin Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
     /* ═══════════════════════════════════════════
-       MODERN ADMIN PANEL STYLING
+       YELLOW LEAF CAFE — ELEGANT ADMIN PANEL
+       CertOcean-inspired clean layout
        ═══════════════════════════════════════════ */
 
     :root {
-      --admin-bg: #0f1117;
-      --admin-surface: #1a1d27;
-      --admin-surface2: #232734;
-      --admin-accent: #22c55e;
-      --admin-accent2: #16a34a;
-      --admin-text: #e4e7ec;
-      --admin-text-dim: #8b92a5;
-      --admin-border: #2d3348;
-      --admin-danger: #ef4444;
-      --admin-warning: #f59e0b;
-      --admin-radius: 12px;
+      --primary: #16a34a;
+      --primary-hover: #15803d;
+      --primary-light: #f0fdf4;
+      --primary-bg: #dcfce7;
+      --bg: #f8f9fb;
+      --white: #ffffff;
+      --text: #1e293b;
+      --text-secondary: #64748b;
+      --text-muted: #94a3b8;
+      --border: #e2e8f0;
+      --border-light: #f1f5f9;
+      --danger: #ef4444;
+      --danger-bg: #fef2f2;
+      --warning: #f59e0b;
+      --radius: 8px;
+      --radius-lg: 12px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+      --shadow-lg: 0 4px 16px rgba(0,0,0,0.08);
     }
 
-    /* Global overrides */
+    /* ── GLOBAL RESET ── */
     body {
-      background: var(--admin-bg) !important;
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-      color: var(--admin-text) !important;
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      -webkit-font-smoothing: antialiased !important;
+      line-height: 1.5 !important;
     }
 
-    /* Top navigation bar */
+    /* ══════════════════════════════════════
+       EDITOR LAYOUT — CLEAN SINGLE COLUMN
+       ══════════════════════════════════════ */
+
+    /* Hide only the preview toggle button */
+    [class*="EditorToggle"] {
+      display: none !important;
+    }
+
+    /* Make editor pane comfortable width */
+    [class*="ControlPane"],
+    [class*="EditorControlPane"] {
+      max-width: 960px !important;
+      padding: 32px 24px !important;
+    }
+
+    /* ── TOP HEADER BAR ── */
     [class*="AppHeader"], header[class*="Header"] {
-      background: var(--admin-surface) !important;
-      border-bottom: 1px solid var(--admin-border) !important;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.3) !important;
+      background: var(--white) !important;
+      border-bottom: 1px solid var(--border) !important;
+      box-shadow: var(--shadow-sm) !important;
+      padding: 0 24px !important;
     }
 
-    [class*="AppHeader"] a, header a {
-      color: var(--admin-text) !important;
-      font-weight: 500 !important;
+    [class*="AppHeader"] a {
+      color: var(--text) !important;
+      font-weight: 600 !important;
+      font-size: 14px !important;
+      text-decoration: none !important;
     }
 
     [class*="AppHeader"] a:hover {
-      color: var(--admin-accent) !important;
+      color: var(--primary) !important;
     }
 
-    /* Sidebar / Collections nav */
-    [class*="Sidebar"], [class*="CollectionTop"], nav[class*="Collection"] {
-      background: var(--admin-surface) !important;
-      border-right: 1px solid var(--admin-border) !important;
+    /* ── SIDEBAR ── */
+    [class*="Sidebar"], nav[class*="Collection"] {
+      background: var(--white) !important;
+      border-right: 1px solid var(--border) !important;
+      padding: 20px 12px !important;
     }
 
+    /* Sidebar title */
+    [class*="SidebarHeading"] {
+      color: var(--text) !important;
+      font-weight: 800 !important;
+      font-size: 11px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 1.2px !important;
+      padding: 12px 14px 8px !important;
+      color: var(--text-muted) !important;
+    }
+
+    /* Sidebar nav links */
     [class*="SidebarNavLink"], [class*="NavLink"] {
-      color: var(--admin-text-dim) !important;
-      border-radius: 8px !important;
-      margin: 2px 8px !important;
+      color: var(--text-secondary) !important;
+      font-weight: 500 !important;
+      font-size: 14px !important;
       padding: 10px 14px !important;
-      transition: all 0.2s ease !important;
+      margin: 2px 0 !important;
+      border-radius: var(--radius) !important;
+      transition: all 0.15s !important;
     }
 
     [class*="SidebarNavLink"]:hover, [class*="NavLink"]:hover {
-      background: var(--admin-surface2) !important;
-      color: var(--admin-accent) !important;
+      background: var(--primary-light) !important;
+      color: var(--primary) !important;
     }
 
-    [class*="SidebarNavLink"][class*="active"], [class*="NavLink"][class*="active"] {
-      background: rgba(34, 197, 94, 0.12) !important;
-      color: var(--admin-accent) !important;
+    [class*="SidebarNavLink"][class*="active"],
+    [class*="NavLink"][class*="active"],
+    [class*="SidebarNavLink"][class*="selected"] {
+      background: var(--primary) !important;
+      color: var(--white) !important;
       font-weight: 600 !important;
-      border-left: 3px solid var(--admin-accent) !important;
     }
 
-    /* Main content area */
-    [class*="Main"], main, [class*="EntryEditor"], [class*="EditorContainer"] {
-      background: var(--admin-bg) !important;
+    /* ── MAIN CONTENT ── */
+    [class*="Main"], main {
+      background: var(--bg) !important;
     }
 
-    /* Cards and panels */
-    [class*="Card"], [class*="ObjectWidget"], [class*="ListItem"], [class*="NestedCollection"] {
-      background: var(--admin-surface) !important;
-      border: 1px solid var(--admin-border) !important;
-      border-radius: var(--admin-radius) !important;
-      margin-bottom: 8px !important;
-      transition: border-color 0.2s ease !important;
+    /* ── PAGE HEADINGS ── */
+    [class*="CollectionTop"] h1 {
+      font-weight: 800 !important;
+      font-size: 24px !important;
+      color: var(--text) !important;
     }
 
-    [class*="Card"]:hover, [class*="ListItem"]:hover {
-      border-color: var(--admin-accent) !important;
+    /* ── ENTRY CARDS IN LIST VIEW ── */
+    [class*="Card"], [class*="EntryCard"], [class*="ListCardLink"] {
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: var(--shadow-sm) !important;
+      transition: all 0.2s !important;
+      color: var(--text) !important;
     }
 
-    /* Input fields */
-    input[type="text"], input[type="number"], input[type="email"], input[type="url"],
-    input[type="password"], textarea, select, [class*="ControlInput"] {
-      background: var(--admin-surface2) !important;
-      border: 1px solid var(--admin-border) !important;
-      border-radius: 8px !important;
-      color: var(--admin-text) !important;
+    [class*="Card"]:hover, [class*="EntryCard"]:hover {
+      box-shadow: var(--shadow) !important;
+      border-color: var(--primary) !important;
+    }
+
+    /* ── FORM LABELS ── */
+    label, [class*="ControlLabel"], [class*="FieldLabel"],
+    [class*="ObjectWidgetLabel"], [class*="ListLabel"] {
+      color: var(--text) !important;
+      font-weight: 600 !important;
+      font-size: 13px !important;
+      letter-spacing: 0.3px !important;
+      margin-bottom: 6px !important;
+      display: block !important;
+    }
+
+    /* ── INPUT FIELDS ── */
+    input[type="text"], input[type="number"], input[type="email"],
+    input[type="url"], input[type="password"], textarea, select {
+      background: var(--white) !important;
+      border: 1.5px solid var(--border) !important;
+      border-radius: var(--radius) !important;
+      color: var(--text) !important;
       padding: 10px 14px !important;
       font-size: 14px !important;
-      transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+      font-family: 'Inter', sans-serif !important;
+      transition: border-color 0.2s, box-shadow 0.2s !important;
+      width: 100% !important;
     }
 
     input:focus, textarea:focus, select:focus {
-      border-color: var(--admin-accent) !important;
-      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15) !important;
+      border-color: var(--primary) !important;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.1) !important;
       outline: none !important;
     }
 
-    /* Labels */
-    label, [class*="ControlLabel"], [class*="FieldLabel"] {
-      color: var(--admin-text) !important;
-      font-weight: 600 !important;
-      font-size: 13px !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.5px !important;
-      margin-bottom: 6px !important;
+    textarea {
+      min-height: 100px !important;
+      resize: vertical !important;
     }
 
-    /* Hints */
+    /* ── HINT TEXT ── */
     [class*="ControlHint"] {
-      color: var(--admin-text-dim) !important;
+      color: var(--text-muted) !important;
       font-size: 12px !important;
+      margin-top: 4px !important;
     }
 
-    /* Buttons - Primary */
-    [class*="ToolbarButton"], button[class*="Button"], [class*="PublishButton"] {
-      border-radius: 8px !important;
+    /* ══════════════════════════════════════
+       ALL BUTTONS — CLEARLY READABLE
+       ══════════════════════════════════════ */
+
+    /* Base button style */
+    button, [class*="Button"], [role="button"] {
+      font-family: 'Inter', sans-serif !important;
+      border-radius: var(--radius) !important;
       font-weight: 600 !important;
-      padding: 8px 20px !important;
-      transition: all 0.2s ease !important;
       font-size: 13px !important;
-      text-transform: uppercase !important;
-      letter-spacing: 0.5px !important;
+      cursor: pointer !important;
+      transition: all 0.15s !important;
+      line-height: 1.4 !important;
     }
 
-    /* Green action buttons */
-    [class*="PublishButton"], button[class*="ToolbarButton"][class*="enabled"] {
-      background: linear-gradient(135deg, var(--admin-accent), var(--admin-accent2)) !important;
+    /* PRIMARY: Publish / Save */
+    [class*="PublishButton"],
+    [class*="ToolbarButton"][class*="enabled"],
+    [class*="ToolbarSection"] > button:first-child {
+      background: var(--primary) !important;
+      color: var(--white) !important;
       border: none !important;
-      color: white !important;
-      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3) !important;
+      padding: 10px 24px !important;
+      font-size: 14px !important;
+      font-weight: 700 !important;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.25) !important;
     }
 
     [class*="PublishButton"]:hover {
-      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4) !important;
-      transform: translateY(-1px) !important;
+      background: var(--primary-hover) !important;
+      box-shadow: 0 4px 12px rgba(22, 163, 74, 0.35) !important;
     }
 
-    /* Delete/danger buttons */
-    [class*="DeleteButton"], button[class*="delete" i] {
-      background: rgba(239, 68, 68, 0.12) !important;
-      color: var(--admin-danger) !important;
-      border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    /* SECONDARY: Add buttons */
+    [class*="ListControl"] button,
+    button[class*="add" i],
+    [class*="AddButton"] {
+      background: var(--primary-light) !important;
+      color: var(--primary) !important;
+      border: 1.5px solid var(--primary) !important;
+      padding: 8px 18px !important;
+      font-weight: 600 !important;
     }
 
-    /* Table/List views */
-    [class*="TableRow"], [class*="EntryListing"] {
-      border-bottom: 1px solid var(--admin-border) !important;
+    [class*="ListControl"] button:hover,
+    [class*="AddButton"]:hover {
+      background: var(--primary) !important;
+      color: var(--white) !important;
     }
 
-    [class*="TableRow"]:hover {
-      background: var(--admin-surface2) !important;
+    /* DANGER: Delete / Remove */
+    [class*="DeleteButton"],
+    button[class*="delete" i],
+    button[class*="remove" i] {
+      background: var(--danger-bg) !important;
+      color: var(--danger) !important;
+      border: 1.5px solid #fecaca !important;
+      padding: 8px 16px !important;
     }
 
-    /* Media library */
-    [class*="MediaLibrary"], [class*="Modal"] {
-      background: var(--admin-surface) !important;
-      border-radius: var(--admin-radius) !important;
-      border: 1px solid var(--admin-border) !important;
+    [class*="DeleteButton"]:hover {
+      background: var(--danger) !important;
+      color: var(--white) !important;
     }
 
-    [class*="MediaLibraryTop"] {
-      background: var(--admin-surface) !important;
-    }
-
-    /* Scrollbar */
-    ::-webkit-scrollbar {
-      width: 6px;
-    }
-    ::-webkit-scrollbar-track {
-      background: var(--admin-bg);
-    }
-    ::-webkit-scrollbar-thumb {
-      background: var(--admin-border);
-      border-radius: 3px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: var(--admin-text-dim);
-    }
-
-    /* Toolbar */
-    [class*="Toolbar"], [class*="EditorToolbar"] {
-      background: var(--admin-surface) !important;
-      border-bottom: 1px solid var(--admin-border) !important;
-    }
-
-    /* Preview pane */
-    [class*="PreviewPane"], [class*="Preview"] {
-      background: var(--admin-surface2) !important;
-    }
-
-    /* Toggle switch */
-    [class*="Toggle"], [class*="Switch"] {
-      background: var(--admin-border) !important;
-    }
-
-    /* Dropdown menus */
-    [class*="Dropdown"], [class*="Menu"], ul[role="listbox"] {
-      background: var(--admin-surface) !important;
-      border: 1px solid var(--admin-border) !important;
-      border-radius: 8px !important;
-      box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important;
-    }
-
-    [class*="DropdownItem"]:hover {
-      background: var(--admin-surface2) !important;
-    }
-
-    /* Login screen styling */
-    [class*="LoginPage"], [class*="AuthenticationPage"] {
-      background: linear-gradient(135deg, #0f1117 0%, #1a2332 100%) !important;
-    }
-
-    [class*="LoginButton"] {
-      background: linear-gradient(135deg, var(--admin-accent), var(--admin-accent2)) !important;
+    /* ══════════════════════════════════════
+       MEDIA LIBRARY — UPLOAD BUTTON FIX
+       ══════════════════════════════════════ */
+    [class*="MediaLibraryTop"] button,
+    [class*="MediaLibrary"] button,
+    [class*="UploadButton"],
+    [class*="MediaLibraryHeader"] button {
+      background: var(--primary) !important;
+      color: var(--white) !important;
       border: none !important;
-      border-radius: 8px !important;
-      padding: 12px 32px !important;
+      padding: 10px 24px !important;
+      font-size: 14px !important;
       font-weight: 700 !important;
+      border-radius: var(--radius) !important;
+      cursor: pointer !important;
+      min-width: 100px !important;
     }
 
-    /* Rich text editor */
-    [class*="EditorControlBar"] {
-      background: var(--admin-surface) !important;
-      border-bottom: 1px solid var(--admin-border) !important;
+    [class*="MediaLibraryTop"] button:hover,
+    [class*="UploadButton"]:hover {
+      background: var(--primary-hover) !important;
     }
 
-    /* Notification toasts */
-    [class*="Toast"], [class*="Notification"] {
-      background: var(--admin-surface) !important;
-      border: 1px solid var(--admin-border) !important;
-      border-radius: 8px !important;
-      color: var(--admin-text) !important;
+    /* Copy / Download buttons in media */
+    [class*="CopyToClipBoardButton"],
+    [class*="DownloadButton"] {
+      background: var(--bg) !important;
+      color: var(--text) !important;
+      border: 1.5px solid var(--border) !important;
+      padding: 8px 16px !important;
     }
 
-    /* Loading spinner area */
-    [class*="Loader"] {
-      color: var(--admin-accent) !important;
+    /* Delete selected in media */
+    [class*="DeleteSelectedButton"] {
+      background: var(--danger-bg) !important;
+      color: var(--danger) !important;
+      border: 1.5px solid #fecaca !important;
     }
 
-    /* Search */
-    [class*="SearchInput"] {
-      background: var(--admin-surface2) !important;
-      border: 1px solid var(--admin-border) !important;
-      color: var(--admin-text) !important;
+    /* Media library modal */
+    [class*="MediaLibrary"], [class*="Modal"] {
+      background: var(--white) !important;
+      border-radius: var(--radius-lg) !important;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15) !important;
     }
 
-    /* Breadcrumbs */
-    [class*="Breadcrumb"] {
-      color: var(--admin-text-dim) !important;
+    [class*="MediaLibraryTop"], [class*="MediaLibraryHeader"] {
+      background: var(--white) !important;
+      border-bottom: 1px solid var(--border) !important;
+      padding: 16px 24px !important;
     }
 
-    [class*="Breadcrumb"] a {
-      color: var(--admin-accent) !important;
+    [class*="MediaLibraryCardGrid"] {
+      padding: 24px !important;
     }
 
-    /* Image widget */
+    /* Media library search */
+    [class*="MediaLibrary"] input[type="text"],
+    [class*="MediaLibrary"] [class*="SearchInput"] {
+      background: var(--bg) !important;
+      border: 1.5px solid var(--border) !important;
+      color: var(--text) !important;
+    }
+
+    /* ── IMAGE WIDGET ── */
     [class*="ImageWidget"], [class*="FileWidget"] {
-      border: 2px dashed var(--admin-border) !important;
-      border-radius: var(--admin-radius) !important;
-      background: var(--admin-surface2) !important;
+      border: 2px dashed var(--border) !important;
+      border-radius: var(--radius-lg) !important;
+      background: var(--bg) !important;
+      padding: 24px !important;
+      text-align: center !important;
+      transition: all 0.2s !important;
     }
 
     [class*="ImageWidget"]:hover {
-      border-color: var(--admin-accent) !important;
+      border-color: var(--primary) !important;
+      background: var(--primary-light) !important;
     }
 
-    /* Custom branding header */
-    [class*="AppHeader"] [class*="AppHeaderContent"]::before {
-      content: '🌿 ';
+    [class*="ImageWidget"] button,
+    [class*="FileWidget"] button {
+      background: var(--primary) !important;
+      color: var(--white) !important;
+      border: none !important;
+      padding: 8px 20px !important;
+      margin: 4px !important;
+    }
+
+    /* ── LIST ITEMS (products, FAQ items, etc.) ── */
+    [class*="ListItem"], [class*="SortableListItem"] {
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius-lg) !important;
+      margin-bottom: 10px !important;
+      overflow: hidden !important;
+    }
+
+    /* List item header bar */
+    [class*="ListItemTopBar"] {
+      background: var(--border-light) !important;
+      border-bottom: 1px solid var(--border) !important;
+      padding: 10px 16px !important;
+    }
+
+    [class*="ListItemTopBar"] span,
+    [class*="ListItemSummary"] {
+      color: var(--text) !important;
+      font-weight: 600 !important;
+      font-size: 14px !important;
+    }
+
+    /* Collapse/expand arrow */
+    [class*="ListItemTopBar"] button {
+      background: transparent !important;
+      color: var(--text-secondary) !important;
+      border: none !important;
+      padding: 4px 8px !important;
+      min-width: auto !important;
+    }
+
+    /* Remove (X) button on list items */
+    [class*="ListItemTopBar"] [class*="close" i],
+    [class*="ListItemTopBar"] button:last-child {
+      background: transparent !important;
+      color: var(--text-muted) !important;
+      border: none !important;
+      font-size: 16px !important;
+    }
+
+    [class*="ListItemTopBar"] [class*="close" i]:hover,
+    [class*="ListItemTopBar"] button:last-child:hover {
+      color: var(--danger) !important;
+      background: var(--danger-bg) !important;
+    }
+
+    /* ── NESTED OBJECT FIELDS ── */
+    [class*="ObjectWidget"], [class*="ObjectControl"] {
+      background: var(--bg) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius-lg) !important;
+      padding: 20px !important;
+      margin-bottom: 16px !important;
+    }
+
+    /* ── TOOLBAR (top bar in editor) ── */
+    [class*="Toolbar"], [class*="EditorToolbar"] {
+      background: var(--white) !important;
+      border-bottom: 1px solid var(--border) !important;
+      padding: 8px 24px !important;
+    }
+
+    /* ── DROPDOWN ── */
+    [class*="Dropdown"], [class*="Menu"], ul[role="listbox"] {
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius) !important;
+      box-shadow: var(--shadow-lg) !important;
+    }
+
+    [class*="DropdownItem"]:hover, li[role="option"]:hover {
+      background: var(--primary-light) !important;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+    /* ── STATUS BADGES ── */
+    [class*="StatusPublished"] {
+      background: var(--primary-bg) !important;
+      color: var(--primary) !important;
+      padding: 4px 12px !important;
+      border-radius: 20px !important;
+      font-weight: 700 !important;
+      font-size: 12px !important;
+    }
+
+    /* ── LOGIN PAGE ── */
+    [class*="LoginPage"], [class*="AuthenticationPage"] {
+      background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%) !important;
+    }
+
+    [class*="LoginButton"] {
+      background: var(--primary) !important;
+      color: var(--white) !important;
+      border: none !important;
+      border-radius: var(--radius) !important;
+      padding: 12px 32px !important;
+      font-weight: 700 !important;
+      font-size: 15px !important;
+    }
+
+    /* ── SEARCH INPUT ── */
+    [class*="SearchInput"] {
+      background: var(--white) !important;
+      border: 1.5px solid var(--border) !important;
+      border-radius: var(--radius) !important;
+      color: var(--text) !important;
+      padding: 8px 14px !important;
+    }
+
+    /* ── TABLE ROWS ── */
+    [class*="TableRow"]:hover {
+      background: var(--border-light) !important;
+    }
+
+    /* ── ALL TEXT READABLE ── */
+    [class*="ControlPane"] *,
+    [class*="EditorControlPane"] * {
+      color: var(--text);
+    }
+
+    [class*="ControlPane"] label,
+    [class*="EditorControlPane"] label {
+      color: var(--text) !important;
+    }
+
+    [class*="ControlPane"] [class*="Hint"],
+    [class*="EditorControlPane"] [class*="Hint"] {
+      color: var(--text-muted) !important;
+    }
+
+    /* ── SORT BY DROPDOWN ── */
+    [class*="SortControl"] select,
+    [class*="ViewStyle"] button {
+      background: var(--white) !important;
+      color: var(--text) !important;
+      border: 1.5px solid var(--border) !important;
+    }
+
+    /* ── BREADCRUMB & BACK NAV ── */
+    [class*="Breadcrumb"] {
+      color: var(--text-secondary) !important;
+    }
+
+    [class*="Breadcrumb"] a {
+      color: var(--primary) !important;
+    }
+
+    [class*="BackArrow"], [class*="BackButton"] {
+      color: var(--text-secondary) !important;
+    }
+
+    /* ── NOTIFICATION TOAST ── */
+    [class*="Toast"], [class*="Notification"] {
+      background: var(--white) !important;
+      border: 1px solid var(--border) !important;
+      border-radius: var(--radius) !important;
+      box-shadow: var(--shadow-lg) !important;
+      color: var(--text) !important;
+    }
+
+    /* ── COLLECTION TOP (header area) ── */
+    [class*="CollectionTop"] {
+      background: var(--white) !important;
+      padding: 20px 24px !important;
+      border-bottom: 1px solid var(--border) !important;
+    }
+
+    /* ── FIX: ALL MODAL BUTTONS READABLE ── */
+    [class*="Modal"] button,
+    [class*="Dialog"] button {
+      min-width: 80px !important;
+      padding: 8px 16px !important;
     }
   </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <script>
-    // Custom image validation — max 3MB, HD resolution
-    CMS.registerEventListener({
-      name: 'preSave',
-      handler: ({ entry }) => {
-        return entry;
-      }
-    });
-  </script>
 </body>
 </html>

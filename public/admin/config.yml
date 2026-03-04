@@ -5,11 +5,6 @@ backend:
 media_folder: "public/images/products"
 public_folder: "/images/products"
 
-# Image settings
-media_library:
-  name: "upload"
-  max_file_size: 3145728
-
 collections:
   # ═══════════════════════════════════
   # ⚙️ SITE SETTINGS
@@ -64,7 +59,7 @@ collections:
               - { name: "slug", label: "URL Slug", widget: "string", hint: "lowercase-with-dashes" }
               - { name: "category", label: "Category", widget: "select", options: ["flowers", "edibles", "accessories"] }
               - { name: "subcategory", label: "Subcategory", widget: "string", hint: "indica, sativa, hybrid, preroll, gummies, cookies, brownies, grinder, bong, rolling-tray, rolling-paper" }
-              - { name: "image", label: "Product Image (max 3MB, HD)", widget: "image", required: false, hint: "Upload HD image, max 3MB. Recommended: 600×600px minimum." }
+              - { name: "image", label: "Product Image (max 3MB, HD)", widget: "image", required: false, hint: "PNG or JPEG only. Recommended: 1920×1080px. Max 3MB." }
               - { name: "price", label: "Original Price (฿)", widget: "number", value_type: "float" }
               - { name: "sale", label: "Sale Price (฿)", widget: "number", value_type: "float" }
               - { name: "weight", label: "Weight/Size", widget: "string", required: false }
