@@ -35,8 +35,8 @@ export default function ProductCard({ product, onAdd, onClick }) {
           <span className="rating-count">({product.reviews})</span>
         </div>
         <div className="product-pricing">
-          <span className="price-sale">${product.sale}</span>
-          <span className="price-orig">${product.price}</span>
+          <span className="price-sale">฿{product.sale}</span>
+          <span className="price-orig">฿{product.price}</span>
           {disc > 0 && <span className="discount-pct">-{disc}%</span>}
         </div>
         <div className="product-footer">

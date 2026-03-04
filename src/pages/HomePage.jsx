@@ -29,14 +29,21 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
 
   return (
     <>
-      <div className="hero">
-        <div className="hero-inner">
+      <div className="hero" style={{ backgroundImage: 'url(/images/hero/banner.jpg)', backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className="hero-overlay" style={{ background: 'linear-gradient(135deg, rgba(15,45,15,0.88) 0%, rgba(0,0,0,0.75) 100%)', position: 'absolute', top: 0, left: 0, right: 0, bottom: 0 }}></div>
+        <div className="hero-inner" style={{ position: 'relative', zIndex: 1 }}>
           <div className="hero-text">
+            <div style={{ display: 'inline-block', background: 'linear-gradient(90deg, #ff4444, #ff6b00)', color: '#fff', padding: '6px 16px', borderRadius: 20, fontSize: 13, fontWeight: 700, marginBottom: 12, letterSpacing: 1 }}>
+              🔥 GRAND OPENING — UP TO 60% OFF
+            </div>
             <h1>{HERO.title.split('\n').map((line, i) => <span key={i}>{i > 0 && <br />}{line}</span>)}</h1>
             <p>{HERO.subtitle}</p>
-            <Link to={HERO.cta_link} className="hero-cta">{HERO.cta_text}</Link>
+            <div style={{ display: 'flex', gap: 12, marginTop: 16, flexWrap: 'wrap' }}>
+              <Link to={HERO.cta_link} className="hero-cta">{HERO.cta_text}</Link>
+              <Link to="/shop/edibles" className="hero-cta" style={{ background: 'transparent', border: '2px solid #fff' }}>Browse Edibles</Link>
+            </div>
           </div>
-          <div className="hero-visual">🌿</div>
+          <div className="hero-visual" style={{ fontSize: 80 }}>🌿</div>
         </div>
       </div>
 

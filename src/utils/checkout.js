@@ -2,7 +2,7 @@ import { WHATSAPP_NUMBER } from '../data/products';
 
 export function generateWhatsAppCheckout(cartItems) {
   const lines = cartItems
-    .map(i => `• ${i.name} (x${i.qty}) — $${(i.sale * i.qty).toFixed(2)}`)
+    .map(i => `• ${i.name} (x${i.qty}) — ฿${(i.sale * i.qty).toFixed(2)}`)
     .join("\n");
   const total = cartItems.reduce((s, i) => s + i.sale * i.qty, 0).toFixed(2);
   const pts = Math.floor(parseFloat(total));
@@ -12,7 +12,7 @@ export function generateWhatsAppCheckout(cartItems) {
 *Items:*
 ${lines}
 
-*Total: $${total}*
+*Total: ฿${total}*
 *Loyalty Points Earned: ${pts}*
 
 Please confirm availability and payment details. Thank you!`;

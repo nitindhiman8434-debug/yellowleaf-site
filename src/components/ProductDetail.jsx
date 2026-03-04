@@ -14,7 +14,7 @@ export default function ProductDetail({ product, onClose, onAdd }) {
       <div className="pd-card" onClick={e => e.stopPropagation()}>
         <div className="pd-top">
           <button className="pd-close" onClick={onClose}>✕</button>
-          <div className="pd-image">{product.img}</div>
+          <div className="pd-image">{product.img && product.img.startsWith('/') ? <img src={product.img} alt={product.name} style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }} /> : product.img}</div>
           <div className="pd-info">
             <div className="pd-breadcrumb">{product.cat} / {product.sub} / {product.name}</div>
             <h2 className="pd-name">{product.name}</h2>
@@ -24,8 +24,8 @@ export default function ProductDetail({ product, onClose, onAdd }) {
               <span className="rating-count">({product.reviews} reviews)</span>
             </div>
             <div className="pd-prices">
-              <span className="pd-sale">${product.sale}</span>
-              <span className="pd-orig">${product.price}</span>
+              <span className="pd-sale">฿{product.sale}</span>
+              <span className="pd-orig">฿{product.price}</span>
               {disc > 0 && <span className="discount-pct">-{disc}%</span>}
             </div>
             <div className="pd-stats">
@@ -43,7 +43,7 @@ export default function ProductDetail({ product, onClose, onAdd }) {
               )}
               {ppg && (
                 <div className="pd-stat">
-                  <div className="pd-stat-val">${ppg}</div>
+                  <div className="pd-stat-val">฿{ppg}</div>
                   <div className="pd-stat-label">/gram</div>
                 </div>
               )}

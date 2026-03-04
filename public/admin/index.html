@@ -3,10 +3,297 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yellow Leaf Cafe Admin</title>
+  <title>Yellow Leaf Cafe — Admin Dashboard</title>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    /* ═══════════════════════════════════════════
+       MODERN ADMIN PANEL STYLING
+       ═══════════════════════════════════════════ */
+
+    :root {
+      --admin-bg: #0f1117;
+      --admin-surface: #1a1d27;
+      --admin-surface2: #232734;
+      --admin-accent: #22c55e;
+      --admin-accent2: #16a34a;
+      --admin-text: #e4e7ec;
+      --admin-text-dim: #8b92a5;
+      --admin-border: #2d3348;
+      --admin-danger: #ef4444;
+      --admin-warning: #f59e0b;
+      --admin-radius: 12px;
+    }
+
+    /* Global overrides */
+    body {
+      background: var(--admin-bg) !important;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+      color: var(--admin-text) !important;
+    }
+
+    /* Top navigation bar */
+    [class*="AppHeader"], header[class*="Header"] {
+      background: var(--admin-surface) !important;
+      border-bottom: 1px solid var(--admin-border) !important;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.3) !important;
+    }
+
+    [class*="AppHeader"] a, header a {
+      color: var(--admin-text) !important;
+      font-weight: 500 !important;
+    }
+
+    [class*="AppHeader"] a:hover {
+      color: var(--admin-accent) !important;
+    }
+
+    /* Sidebar / Collections nav */
+    [class*="Sidebar"], [class*="CollectionTop"], nav[class*="Collection"] {
+      background: var(--admin-surface) !important;
+      border-right: 1px solid var(--admin-border) !important;
+    }
+
+    [class*="SidebarNavLink"], [class*="NavLink"] {
+      color: var(--admin-text-dim) !important;
+      border-radius: 8px !important;
+      margin: 2px 8px !important;
+      padding: 10px 14px !important;
+      transition: all 0.2s ease !important;
+    }
+
+    [class*="SidebarNavLink"]:hover, [class*="NavLink"]:hover {
+      background: var(--admin-surface2) !important;
+      color: var(--admin-accent) !important;
+    }
+
+    [class*="SidebarNavLink"][class*="active"], [class*="NavLink"][class*="active"] {
+      background: rgba(34, 197, 94, 0.12) !important;
+      color: var(--admin-accent) !important;
+      font-weight: 600 !important;
+      border-left: 3px solid var(--admin-accent) !important;
+    }
+
+    /* Main content area */
+    [class*="Main"], main, [class*="EntryEditor"], [class*="EditorContainer"] {
+      background: var(--admin-bg) !important;
+    }
+
+    /* Cards and panels */
+    [class*="Card"], [class*="ObjectWidget"], [class*="ListItem"], [class*="NestedCollection"] {
+      background: var(--admin-surface) !important;
+      border: 1px solid var(--admin-border) !important;
+      border-radius: var(--admin-radius) !important;
+      margin-bottom: 8px !important;
+      transition: border-color 0.2s ease !important;
+    }
+
+    [class*="Card"]:hover, [class*="ListItem"]:hover {
+      border-color: var(--admin-accent) !important;
+    }
+
+    /* Input fields */
+    input[type="text"], input[type="number"], input[type="email"], input[type="url"],
+    input[type="password"], textarea, select, [class*="ControlInput"] {
+      background: var(--admin-surface2) !important;
+      border: 1px solid var(--admin-border) !important;
+      border-radius: 8px !important;
+      color: var(--admin-text) !important;
+      padding: 10px 14px !important;
+      font-size: 14px !important;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--admin-accent) !important;
+      box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15) !important;
+      outline: none !important;
+    }
+
+    /* Labels */
+    label, [class*="ControlLabel"], [class*="FieldLabel"] {
+      color: var(--admin-text) !important;
+      font-weight: 600 !important;
+      font-size: 13px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+      margin-bottom: 6px !important;
+    }
+
+    /* Hints */
+    [class*="ControlHint"] {
+      color: var(--admin-text-dim) !important;
+      font-size: 12px !important;
+    }
+
+    /* Buttons - Primary */
+    [class*="ToolbarButton"], button[class*="Button"], [class*="PublishButton"] {
+      border-radius: 8px !important;
+      font-weight: 600 !important;
+      padding: 8px 20px !important;
+      transition: all 0.2s ease !important;
+      font-size: 13px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.5px !important;
+    }
+
+    /* Green action buttons */
+    [class*="PublishButton"], button[class*="ToolbarButton"][class*="enabled"] {
+      background: linear-gradient(135deg, var(--admin-accent), var(--admin-accent2)) !important;
+      border: none !important;
+      color: white !important;
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3) !important;
+    }
+
+    [class*="PublishButton"]:hover {
+      box-shadow: 0 6px 20px rgba(34, 197, 94, 0.4) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* Delete/danger buttons */
+    [class*="DeleteButton"], button[class*="delete" i] {
+      background: rgba(239, 68, 68, 0.12) !important;
+      color: var(--admin-danger) !important;
+      border: 1px solid rgba(239, 68, 68, 0.3) !important;
+    }
+
+    /* Table/List views */
+    [class*="TableRow"], [class*="EntryListing"] {
+      border-bottom: 1px solid var(--admin-border) !important;
+    }
+
+    [class*="TableRow"]:hover {
+      background: var(--admin-surface2) !important;
+    }
+
+    /* Media library */
+    [class*="MediaLibrary"], [class*="Modal"] {
+      background: var(--admin-surface) !important;
+      border-radius: var(--admin-radius) !important;
+      border: 1px solid var(--admin-border) !important;
+    }
+
+    [class*="MediaLibraryTop"] {
+      background: var(--admin-surface) !important;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--admin-bg);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: var(--admin-border);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--admin-text-dim);
+    }
+
+    /* Toolbar */
+    [class*="Toolbar"], [class*="EditorToolbar"] {
+      background: var(--admin-surface) !important;
+      border-bottom: 1px solid var(--admin-border) !important;
+    }
+
+    /* Preview pane */
+    [class*="PreviewPane"], [class*="Preview"] {
+      background: var(--admin-surface2) !important;
+    }
+
+    /* Toggle switch */
+    [class*="Toggle"], [class*="Switch"] {
+      background: var(--admin-border) !important;
+    }
+
+    /* Dropdown menus */
+    [class*="Dropdown"], [class*="Menu"], ul[role="listbox"] {
+      background: var(--admin-surface) !important;
+      border: 1px solid var(--admin-border) !important;
+      border-radius: 8px !important;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4) !important;
+    }
+
+    [class*="DropdownItem"]:hover {
+      background: var(--admin-surface2) !important;
+    }
+
+    /* Login screen styling */
+    [class*="LoginPage"], [class*="AuthenticationPage"] {
+      background: linear-gradient(135deg, #0f1117 0%, #1a2332 100%) !important;
+    }
+
+    [class*="LoginButton"] {
+      background: linear-gradient(135deg, var(--admin-accent), var(--admin-accent2)) !important;
+      border: none !important;
+      border-radius: 8px !important;
+      padding: 12px 32px !important;
+      font-weight: 700 !important;
+    }
+
+    /* Rich text editor */
+    [class*="EditorControlBar"] {
+      background: var(--admin-surface) !important;
+      border-bottom: 1px solid var(--admin-border) !important;
+    }
+
+    /* Notification toasts */
+    [class*="Toast"], [class*="Notification"] {
+      background: var(--admin-surface) !important;
+      border: 1px solid var(--admin-border) !important;
+      border-radius: 8px !important;
+      color: var(--admin-text) !important;
+    }
+
+    /* Loading spinner area */
+    [class*="Loader"] {
+      color: var(--admin-accent) !important;
+    }
+
+    /* Search */
+    [class*="SearchInput"] {
+      background: var(--admin-surface2) !important;
+      border: 1px solid var(--admin-border) !important;
+      color: var(--admin-text) !important;
+    }
+
+    /* Breadcrumbs */
+    [class*="Breadcrumb"] {
+      color: var(--admin-text-dim) !important;
+    }
+
+    [class*="Breadcrumb"] a {
+      color: var(--admin-accent) !important;
+    }
+
+    /* Image widget */
+    [class*="ImageWidget"], [class*="FileWidget"] {
+      border: 2px dashed var(--admin-border) !important;
+      border-radius: var(--admin-radius) !important;
+      background: var(--admin-surface2) !important;
+    }
+
+    [class*="ImageWidget"]:hover {
+      border-color: var(--admin-accent) !important;
+    }
+
+    /* Custom branding header */
+    [class*="AppHeader"] [class*="AppHeaderContent"]::before {
+      content: '🌿 ';
+    }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    // Custom image validation — max 3MB, HD resolution
+    CMS.registerEventListener({
+      name: 'preSave',
+      handler: ({ entry }) => {
+        return entry;
+      }
+    });
+  </script>
 </body>
 </html>

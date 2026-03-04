@@ -1,15 +1,15 @@
 {
   "title": "Shipping Information",
-  "intro": "We ship discreetly to all Canadian provinces and territories via Canada Post Xpresspost.",
-  "free_shipping_min": 150,
-  "shipping_fee": 15,
-  "delivery_days": "2-5",
-  "provinces": ["Ontario", "Alberta", "Quebec", "British Columbia", "Manitoba", "Saskatchewan", "Nova Scotia", "New Brunswick", "Newfoundland and Labrador", "Prince Edward Island", "Nunavut", "Yukon", "Northwest Territories"],
+  "intro": "We deliver discreetly across all of Thailand. Fast delivery available in Pattaya and surrounding areas.",
+  "free_shipping_min": 5000,
+  "shipping_fee": 500,
+  "delivery_days": "1-5",
+  "provinces": ["Pattaya", "Chon Buri", "Bangkok", "Chiang Mai", "Phuket", "Krabi", "Hua Hin", "Koh Samui", "Nonthaburi", "Pathum Thani", "Rayong", "Udon Thani", "Khon Kaen"],
   "policies": [
-    "All orders are vacuum-sealed and shipped in discreet packaging",
-    "Tracking number provided for every order via email",
-    "Orders placed before 9am PST ship same business day",
-    "Free shipping on all orders over $150",
-    "Standard shipping fee of $15 for orders under $150"
+    "All orders are sealed and shipped in discreet packaging",
+    "Tracking number provided for every order via WhatsApp",
+    "Same-day delivery available in Pattaya area for orders before 2pm",
+    "Free shipping on all orders over ฿5,000",
+    "Standard shipping fee of ฿500 for orders under ฿5,000"
   ]
 }

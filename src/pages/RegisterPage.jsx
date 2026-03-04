@@ -13,12 +13,10 @@ export default function RegisterPage() {
           <div style={{ fontSize: 48, marginBottom: 16 }}>✅</div>
           <h2>Registration Submitted!</h2>
           <p style={{ color: 'var(--grey-500)', fontSize: 14, lineHeight: 1.7 }}>
-            Your account has been created. Please submit proper identification to{' '}
-            <strong style={{ color: 'var(--green)' }}>{VERIFY_EMAIL}</strong> for account approval.
-            This usually takes within 24 hours.
+            Your account has been created successfully! You can now browse and shop our premium selection.
           </p>
           <p style={{ color: 'var(--grey-500)', fontSize: 14 }}>
-            Once approved, you'll receive <strong style={{ color: 'var(--green)' }}>500 bonus points ($25)</strong> credit!
+            Once approved, you'll receive <strong style={{ color: 'var(--green)' }}>500 bonus points (฿875)</strong> credit!
           </p>
           <button className="form-submit" style={{ marginTop: 20, maxWidth: 200, marginLeft: 'auto', marginRight: 'auto' }} onClick={() => navigate('/')}>
             Return Home
@@ -32,7 +30,7 @@ export default function RegisterPage() {
     <div className="page-container">
       <div className="form-card">
         <h2>Create Account</h2>
-        <p className="form-subtitle">Join Yellow Leaf Cafe and get 500 bonus points ($25)</p>
+        <p className="form-subtitle">Join Yellow Leaf Cafe and get 500 bonus points (฿875)</p>
 
         <div className="form-group"><label>First Name</label><input type="text" placeholder="John" /></div>
         <div className="form-group"><label>Last Name</label><input type="text" placeholder="Doe" /></div>
@@ -50,7 +48,7 @@ export default function RegisterPage() {
         <button className="form-submit" onClick={() => setSubmitted(true)}>Create Account</button>
 
         <div className="id-notice">
-          <strong>⚠️ ID Verification Required:</strong> Submit proper identification to <strong>{VERIFY_EMAIL}</strong> for account approval. Approval usually takes within 24 hours.
+          <strong>Welcome!</strong> Create your account and start shopping. You'll receive <strong style={{ color: 'var(--green)' }}>500 bonus points (฿875)</strong> credit!
         </div>
 
         <div className="form-switch">

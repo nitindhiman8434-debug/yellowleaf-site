@@ -22,6 +22,8 @@ export const FREE_SHIP_MIN = settingsData.free_ship_min;
 export const POINTS_PER_DOLLAR = settingsData.points_per_dollar;
 export const POINTS_TO_DOLLAR = settingsData.points_to_dollar;
 export const ANNOUNCE_BAR = settingsData.announce_bar;
+export const CURRENCY = settingsData.currency || '฿';
+export const ADDRESS = settingsData.address || '';
 export const HERO = {
   title: settingsData.hero_title,
   subtitle: settingsData.hero_subtitle,

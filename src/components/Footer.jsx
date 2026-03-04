@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from '../router';
-import { VERIFY_EMAIL } from '../data/products';
 
 export default function Footer() {
   return (
@@ -9,7 +8,10 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <h3>Yellow Leaf <em>Cafe</em></h3>
-            <p>Canada's trusted online dispensary specializing in Mail Order Marijuana. Lab-tested, discreetly delivered, and backed by our satisfaction guarantee. Serving all provinces and territories since 2017.</p>
+            <p>Thailand's premium cannabis cafe & dispensary. Lab-tested flowers, edibles & accessories delivered to your door. Serving Pattaya and all of Thailand.</p>
+            <p style={{ marginTop: 8, fontSize: 13, color: 'var(--grey-400)' }}>
+              📍 361/4-5, Bang Lamung, Pattaya City, Chon Buri 20150, Thailand
+            </p>
           </div>
           <div className="footer-col">
             <h4>Shop</h4>
@@ -34,14 +36,9 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="footer-notice">
-          <strong className="gold">⚠️ ID Verification Required:</strong> Submit proper identification to{' '}
-          <strong className="grn">{VERIFY_EMAIL}</strong> for account approval. | Minimum order: $100 | Free shipping over $150 | Canada only
-        </div>
-
         <div className="footer-bottom">
-          <span>© 2026 Yellow Leaf Cafe. All rights reserved. Canadian Online Dispensary.</span>
-          <span>Licensed & Regulated · Privacy Policy · Terms of Service</span>
+          <span>© 2026 Yellow Leaf Cafe. All rights reserved.</span>
+          <span>Premium Cannabis Dispensary · Pattaya, Thailand</span>
         </div>
       </div>
     </footer>

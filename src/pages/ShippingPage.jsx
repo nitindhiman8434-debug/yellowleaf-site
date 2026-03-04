@@ -9,8 +9,8 @@ export default function ShippingPage() {
 
       <div className="info-card" style={{ marginBottom: 24 }}>
         <h3 style={{ marginBottom: 12 }}>Shipping Details</h3>
-        <p>📦 Free shipping on orders over <strong>${SHIPPING_PAGE.free_shipping_min}</strong></p>
-        <p>💰 Standard shipping fee: <strong>${SHIPPING_PAGE.shipping_fee}</strong></p>
+        <p>📦 Free shipping on orders over <strong>฿{SHIPPING_PAGE.free_shipping_min}</strong></p>
+        <p>💰 Standard shipping fee: <strong>฿{SHIPPING_PAGE.shipping_fee}</strong></p>
         <p>🚀 Delivery: <strong>{SHIPPING_PAGE.delivery_days} business days</strong></p>
       </div>
 

@@ -2,12 +2,12 @@
   "title": "Loyalty Program",
   "intro": "Earn points on every purchase and redeem them for discounts on future orders!",
   "points_per_dollar": 1,
-  "points_value": "20 points = $1.00",
+  "points_value": "20 points = ฿35",
   "signup_bonus": 500,
   "tiers": [
-    { "name": "Bronze", "min_spend": 0, "perk": "1 point per $1 spent" },
-    { "name": "Silver", "min_spend": 500, "perk": "1.25 points per $1 spent" },
-    { "name": "Gold", "min_spend": 1500, "perk": "1.5 points per $1 spent + priority shipping" },
-    { "name": "Platinum", "min_spend": 3000, "perk": "2 points per $1 spent + free shipping always + exclusive deals" }
+    { "name": "Bronze", "min_spend": 0, "perk": "1 point per ฿35 spent" },
+    { "name": "Silver", "min_spend": 15000, "perk": "1.25 points per ฿35 spent" },
+    { "name": "Gold", "min_spend": 50000, "perk": "1.5 points per ฿35 spent + priority shipping" },
+    { "name": "Platinum", "min_spend": 100000, "perk": "2 points per ฿35 spent + free shipping always + exclusive deals" }
   ]
 }
