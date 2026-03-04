@@ -7,8 +7,8 @@ public_folder: "/images/products"
 
 # Image settings
 media_library:
+  name: "upload"
   max_file_size: 3145728
-  folder_support: true
 
 collections:
   # ═══════════════════════════════════

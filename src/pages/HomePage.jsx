@@ -48,7 +48,7 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
         </div>
       </div>
 
-      {/* ── FLASH DEALS (8 products) ── */}
+      {/* ── FLASH DEALS (12 products) ── */}
       <div className="section">
         <div className="section-header">
           <div>
@@ -57,7 +57,7 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
           </div>
           <Link to="/shop/flowers" className="view-all-btn">View All</Link>
         </div>
-        <ProductGrid products={FLASH_DEALS.slice(0, 8)} onAdd={onAdd} onProductClick={onProductClick} />
+        <ProductGrid products={FLASH_DEALS.slice(0, 12)} onAdd={onAdd} onProductClick={onProductClick} />
       </div>
 
       {/* ── SERVICE PILLARS ── */}
@@ -84,7 +84,44 @@ export default function HomePage({ onAdd, onProductClick, searchQuery }) {
         <ProductGrid products={BEST_SELLERS.slice(0, 12)} onAdd={onAdd} onProductClick={onProductClick} />
       </div>
 
-      {/* ── WHY CHOOSE US / INFO SECTION ── */}
+      {/* ── PROMO / INFO SECTION WITH IMAGE ── */}
+      <div className="promo-section">
+        <div className="promo-inner">
+          <div className="promo-image">
+            <img src="/images/products/sativa-5.jpg" alt="Premium Cannabis Flowers" />
+            <div className="promo-image-badge">NEW ARRIVALS WEEKLY</div>
+          </div>
+          <div className="promo-content">
+            <span className="promo-tag">🌿 FROM FARM TO YOUR DOOR</span>
+            <h2>Sourced From Thailand's<br />Finest Licensed Growers</h2>
+            <p>
+              Every strain in our collection is hand-selected from licensed Thai cultivators 
+              who prioritize organic growing methods and sustainable practices. Our flowers 
+              are harvested at peak potency, slow-cured for maximum flavor, and lab-tested 
+              to guarantee purity and safety.
+            </p>
+            <div className="promo-stats">
+              <div className="promo-stat">
+                <div className="promo-stat-num">30+</div>
+                <div className="promo-stat-label">Premium Strains</div>
+              </div>
+              <div className="promo-stat">
+                <div className="promo-stat-num">100%</div>
+                <div className="promo-stat-label">Lab Tested</div>
+              </div>
+              <div className="promo-stat">
+                <div className="promo-stat-num">50K+</div>
+                <div className="promo-stat-label">Happy Customers</div>
+              </div>
+            </div>
+            <Link to="/shop/flowers" className="hero-cta" style={{ background: 'var(--green)', marginTop: 20 }}>
+              Explore All Strains →
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* ── WHY CHOOSE US ── */}
       <div className="why-section">
         <div className="why-inner">
           <h2 className="why-title">Why Choose Yellow Leaf Cafe?</h2>
