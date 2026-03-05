@@ -858,6 +858,29 @@
       }
     },
     {
+      "id": "e6",
+      "name": "THC Vanilla Cookie",
+      "slug": "thc-vanilla-cookie",
+      "category": "edibles",
+      "subcategory": "cookies",
+      "thc": 50,
+      "price": 850,
+      "sale": 599,
+      "weight": "100mg (2\u00d750mg)",
+      "rating": 4.6,
+      "reviews": 98,
+      "image": "/images/products/edible-vanilla-cookie.jpg",
+      "badge": "",
+      "desc": "Soft-baked vanilla cookie infused with premium THC distillate. Each cookie contains precisely 50mg THC for consistent dosing. Lab-tested for quality and potency. A sweet, buttery treat with a smooth cannabis finish.",
+      "effects": {
+        "relaxed": 82,
+        "happy": 88,
+        "euphoric": 72,
+        "sleepy": 65,
+        "hungry": 78
+      }
+    },
+    {
       "id": "e2",
       "name": "Fudge Brownie Square",
       "slug": "fudge-brownie-square",
