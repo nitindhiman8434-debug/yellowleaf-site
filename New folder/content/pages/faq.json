@@ -1,0 +1,16 @@
+{
+  "title": "Frequently Asked Questions",
+  "subtitle": "Everything you need to know about ordering from Yellow Leaf Cafe",
+  "items": [
+    { "question": "How do I place an order?", "answer": "1. Browse our premium selection and add items to your cart\n2. Check out and complete payment\n3. You'll receive order confirmation via WhatsApp\n4. Expect delivery within 1-3 business days in Pattaya, 3-5 days elsewhere in Thailand" },
+    { "question": "What is the minimum order?", "answer": "The minimum order amount is ฿3,000. Free delivery is available on all orders over ฿5,000." },
+    { "question": "What payment methods do you accept?", "answer": "We accept bank transfer, PromptPay, credit cards, and cryptocurrency (Bitcoin, USDT). Payment details are provided at checkout." },
+    { "question": "How is my order delivered?", "answer": "Orders are packaged discreetly and shipped via express courier. Pattaya local orders may qualify for same-day delivery. All orders come with tracking." },
+    { "question": "Do you deliver outside Pattaya?", "answer": "Yes! We deliver across all of Thailand. Pattaya and Chon Buri orders arrive in 1-2 days. Bangkok in 1-3 days. Other provinces in 3-5 business days." },
+    { "question": "Are your products lab-tested?", "answer": "Yes, all our cannabis products are lab-tested for potency, purity, and safety. We source only from licensed Thai growers." },
+    { "question": "Do you offer free gifts?", "answer": "Free gifts are available for orders over ฿5,000. Gift options must be selected at checkout." },
+    { "question": "Can I contact customer support?", "answer": "Yes! Reach us via WhatsApp, email at support@yellowleaf.club, or visit us at our shop in Pattaya City." },
+    { "question": "Do you have a physical store?", "answer": "Yes! Visit us at 361/4-5, Bang Lamung, Pattaya City, Chon Buri 20150, Thailand. Open daily." },
+    { "question": "How does the loyalty program work?", "answer": "Earn 1 point for every ฿35 spent. Redeem 20 points for ฿35 off your next order. Sign up and get 500 bonus points!" }
+  ]
+}

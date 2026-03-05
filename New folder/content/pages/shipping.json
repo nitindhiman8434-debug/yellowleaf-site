@@ -1,0 +1,15 @@
+{
+  "title": "Shipping Information",
+  "intro": "We deliver discreetly across all of Thailand. Fast delivery available in Pattaya and surrounding areas.",
+  "free_shipping_min": 5000,
+  "shipping_fee": 500,
+  "delivery_days": "1-5",
+  "provinces": ["Pattaya", "Chon Buri", "Bangkok", "Chiang Mai", "Phuket", "Krabi", "Hua Hin", "Koh Samui", "Nonthaburi", "Pathum Thani", "Rayong", "Udon Thani", "Khon Kaen"],
+  "policies": [
+    "All orders are sealed and shipped in discreet packaging",
+    "Tracking number provided for every order via WhatsApp",
+    "Same-day delivery available in Pattaya area for orders before 2pm",
+    "Free shipping on all orders over ฿5,000",
+    "Standard shipping fee of ฿500 for orders under ฿5,000"
+  ]
+}
