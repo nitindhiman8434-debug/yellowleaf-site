@@ -22,7 +22,7 @@ export default function Header({ cartCount, onCartOpen, onSearch }) {
             Yellow Leaf <em>Cafe</em>
           </Link>
 
-          <div className="search-wrap">
+          <div className="search-wrap search-desktop">
             <span className="search-icon">🔍</span>
             <input
               type="text"
@@ -56,6 +56,19 @@ export default function Header({ cartCount, onCartOpen, onSearch }) {
           <Link to="/about" className="nav-link">About</Link>
         </div>
       </nav>
+
+      {/* Mobile search bar — below nav, no overlap */}
+      <div className="search-mobile">
+        <div className="search-wrap">
+          <span className="search-icon">🔍</span>
+          <input
+            type="text"
+            placeholder="Search strains, edibles, accessories..."
+            value={searchVal}
+            onChange={handleSearch}
+          />
+        </div>
+      </div>
     </>
   );
 }
