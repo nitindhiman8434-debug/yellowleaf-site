@@ -3,7 +3,7 @@
   "whatsapp_number": "18052004045",
   "support_email": "support@yellowleaf.club",
   "verify_email": "verify@yellowleaf.club",
-  "min_order": 3000,
+  "min_order": 0,
   "free_ship_min": 1000,
   "points_per_dollar": 1,
   "points_to_dollar": 20,
